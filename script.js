@@ -64,7 +64,7 @@ const roomData = {
         options: [
             {
                 name: 'Plush Carpet',
-                image: 'img/img18.jpg',
+                image: 'img/img16.jpg',
                 features: ['Sound absorption', 'Warmth', 'Comfort underfoot']
             },
             {
