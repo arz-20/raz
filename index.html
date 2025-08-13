@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raz Flooring INC - Professional Flooring Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Raz Flooring INC</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#" id="contactLink" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Premium Flooring Solutions</h1>
+            <p class="hero-subtitle">Transform your space with professional flooring installation from carpet to vinyl, lino tiles, and everything in between</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('services')">Our Services</button>
+                <button class="btn-secondary" onclick="scrollToSection('contact')">Get Quote</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="flooring-showcase">
+                <div class="showcase-item active" data-type="carpet">
+                    <img src="img/stairs.jpg" alt="Luxury Carpet">
+                    <div class="showcase-info">
+                        <h3>Luxury Carpet</h3>
+                        <p>Comfortable and elegant</p>
+                    </div>
+                </div>
+                <div class="showcase-item" data-type="vinyl">
+                    <img src="img/vinyl.jpg" alt="Vinyl Flooring">
+                    <div class="showcase-info">
+                        <h3>Vinyl Flooring</h3>
+                        <p>Durable and stylish</p>
+                    </div>
+                </div>
+                <div class="showcase-item" data-type="tiles">
+                    <img src="img/gym.png" alt="Lino Tiles">
+                    <div class="showcase-info">
+                        <h3>Lino Tiles</h3>
+                        <p>Perfect for offices</p>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-controls">
+                <button class="control-btn active" data-target="carpet">Carpet</button>
+                <button class="control-btn" data-target="vinyl">Vinyl</button>
+                <button class="control-btn" data-target="tiles">Tiles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional flooring solutions for every space in your home or office</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="residential">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Flooring</h3>
+                    <ul>
+                        <li>Living Room Carpet Installation</li>
+                        <li>Kitchen Vinyl & Tile</li>
+                        <li>Bathroom Waterproof Flooring</li>
+                        <li>Bedroom Comfort Solutions</li>
+                    </ul>
+                    <button class="service-btn" onclick="openModal('residential')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="commercial">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial & Office</h3>
+                    <ul>
+                        <li>Office Lino Tiles</li>
+                        <li>Commercial Carpet</li>
+                        <li>High-Traffic Vinyl</li>
+                        <li>Reception Area Flooring</li>
+                    </ul>
+                    <button class="service-btn" onclick="openModal('commercial')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="stairs">
+                    <div class="service-icon">
+                        <i class="fas fa-stairs"></i>
+                    </div>
+                    <h3>Stair Solutions</h3>
+                    <ul>
+                        <li>Carpet Stairs</li>
+                        <li>Vinyl Stair Covering</li>
+                        <li>Safety Non-Slip Options</li>
+                        <li>Custom Stair Runners</li>
+                    </ul>
+                    <button class="service-btn" onclick="openModal('stairs')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="specialty">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Specialty Services</h3>
+                    <ul>
+                        <li>Floor Repairs</li>
+                        <li>Subfloor Preparation</li>
+                        <li>Moisture Barrier Installation</li>
+                        <li>Custom Patterns & Designs</li>
+                    </ul>
+                    <button class="service-btn" onclick="openModal('specialty')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Room Selector -->
+    <section id="room-selector" class="room-selector">
+        <div class="container">
+            <div class="section-header">
+                <h2>Flooring by Room</h2>
+                <p>Explore the perfect flooring solution for each space</p>
+            </div>
+            
+            <div class="room-layout">
+                <div class="room-map">
+                    <div class="room kitchen" data-room="kitchen">
+                        <i class="fas fa-utensils"></i>
+                        <span>Kitchen</span>
+                    </div>
+                    <div class="room living-room" data-room="living">
+                        <i class="fas fa-couch"></i>
+                        <span>Living Room</span>
+                    </div>
+                    <div class="room bathroom" data-room="bathroom">
+                        <i class="fas fa-bath"></i>
+                        <span>Bathroom</span>
+                    </div>
+                    <div class="room bedroom" data-room="bedroom">
+                        <i class="fas fa-bed"></i>
+                        <span>Bedroom</span>
+                    </div>
+                    <div class="room office" data-room="office">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Office</span>
+                    </div>
+                    <div class="room stairs" data-room="stairs">
+                        <i class="fas fa-stairs"></i>
+                        <span>Stairs</span>
+                    </div>
+                </div>
+                
+                <div class="room-details" id="room-details">
+                    <div class="room-info">
+                        <h3>Select a room to see flooring options</h3>
+                        <p>Click on any room above to explore recommended flooring solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Carpet Animation Section -->
+    <section id="carpet-showcase" class="carpet-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Flooring Experience</h2>
+                <p>Click on any flooring type to see it unfurl and reveal options</p>
+            </div>
+            
+            <div class="flooring-buttons">
+                <button class="flooring-trigger" data-type="carpet" data-color="#8B4513">
+                    <i class="fas fa-home"></i>
+                    <span>Luxury Carpet</span>
+                </button>
+                <button class="flooring-trigger" data-type="vinyl" data-color="#D2B48C">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Vinyl Flooring</span>
+                </button>
+                <button class="flooring-trigger" data-type="tiles" data-color="#696969">
+                    <i class="fas fa-th-large"></i>
+                    <span>Lino Tiles</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Carpet Animation Overlay -->
+        <div id="carpet-overlay" class="carpet-overlay">
+            <div class="carpet-roll" id="carpet-roll"></div>
+            <div class="carpet-content" id="carpet-content">
+                <button class="close-carpet" id="close-carpet">&times;</button>
+                <div class="carpet-options" id="carpet-options">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <p>Browse through our portfolio of completed projects</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="carpet">Carpet</button>
+                <button class="filter-btn" data-filter="vinyl">Vinyl</button>
+                <button class="filter-btn" data-filter="stairs">Stairs</button>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Raz Flooring INC</h2>
+                    <p>With over 15 years of experience in the flooring industry, Raz Flooring INC has established itself as a trusted name in professional flooring installation and services.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Licensed & Insured</h4>
+                                <p>Fully licensed and insured for your peace of mind</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>15+ Years Experience</h4>
+                                <p>Proven track record of quality installations</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <h4>Satisfaction Guaranteed</h4>
+                                <p>100% satisfaction guarantee on all our work</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Professional Tools</h4>
+                                <p>State-of-the-art equipment for perfect results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/about.jpg" alt="Professional flooring installation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script defer>
+      window.formbutton = window.formbutton || function(){(formbutton.q=formbutton.q || []).push(arguments)};
+      formbutton("create", {
+        action: "https://formspree.io/f/xgvzdqpa",
+        title: "How can we help?",
+        autoOpen: false,
+        fields: [
+          { type: "email", label: "Email:", name: "email", required: true, placeholder: "your@email.com" },
+          { type: "textarea", label: "Message:", name: "message", placeholder: "What's on your mind?" },
+          { type: "submit" }
+        ],
+        styles: { title: { backgroundColor: "#e55a2b" }, button: { backgroundColor: "#e55a2b" } }
+      });
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("contactLink").addEventListener("click", function(e) {
+          e.preventDefault();
+          formbutton("open");
+        });
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Raz Flooring INC</h3>
+                    <p>Professional flooring solutions for residential and commercial spaces.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/RAZFLOORING" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com/raz.flooring" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Carpet Installation</a></li>
+                        <li><a href="#">Vinyl Flooring</a></li>
+                        <li><a href="#">Lino Tiles</a></li>
+                        <li><a href="#">Stair Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Free Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (780) 655-9905</p>
+                    <p><i class="fas fa-envelope"></i> rz.flooring1975@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sun: 8AM-6PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Raz Flooring INC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal" id="service-modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Service Details</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-content" id="modal-content">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
