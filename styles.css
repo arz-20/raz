@@ -52,10 +52,9 @@ body {
     top: 0;
     width: 100%;
     background: rgb(186, 182, 181);
-    backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--primary-black);
 }
 
 .navbar.scrolled {
@@ -944,7 +943,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: var(--primary-black);
+        background: var(--primary-background);
         width: 100%;
         text-align: center;
         transition: 0.3s;
